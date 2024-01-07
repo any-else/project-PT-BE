@@ -38,6 +38,7 @@ const AuthController = {
       // login thành công
       return res.status(201).json({
         message: "login thành công",
+        user: findUser,
       });
     } catch (error) {
       res.status(500).json({

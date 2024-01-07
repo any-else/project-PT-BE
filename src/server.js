@@ -3,8 +3,10 @@ const app = express();
 const rootRoute = require("./routes/rootRoute");
 const bodyParser = require("body-parser");
 const cors = require("cors");
+const cookieParser = require("cookie-parser");
 //Middleware global
 app.use(bodyParser.json());
+app.use(cookieParser());
 app.use(
   cors({
     origin: "http://localhost:3000",
